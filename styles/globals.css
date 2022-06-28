@@ -88,6 +88,7 @@ p, h5, h4{
 
   /* Variables de tema */
   --ligth-primary-color:#fcfcfc;
+  --ligth-primary-color_opacity:#ffffff50;
   --ligth-secondary-color:#F2D43D;
   --ligth-tertiary-color:#FF2A3F;
   --ligth-primary-text_color: #000;

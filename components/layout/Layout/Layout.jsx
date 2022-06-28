@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {Footer} from "../../";
+import {Footer, NavBar} from "../../";
 import style from './Layout.module.css'
 
 
@@ -17,13 +17,12 @@ const Layout = ({children, title, description, home, cart, nav=true ,footer=true
             </Head>
             {
                 nav &&(
-                    <></>
-                /* <header id="header" className={style.header}>
-                    <NavBar
-                        home={home}
-                        cart={cart}
-                    />
-                </header> */
+                    <header id="header" className={style.header}>
+                        <NavBar
+                            home={home}
+                            cart={cart}
+                        />
+                    </header>
                 )
             }
 
