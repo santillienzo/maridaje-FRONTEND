@@ -1,5 +1,5 @@
 .navDesktop_container{
-    background-color: var(--global-primary-color_opacity);
+    background-color: var(--global-background-color_opacity);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,7 +56,7 @@
     left: 0;
     height: 2px;
     width: 0;
-    background-color: var(--global-tertiary-color);
+    background-color: var(--global-secondary-color);
     bottom: 0px;
     transition: 0.5s;
     border-radius: 4px;

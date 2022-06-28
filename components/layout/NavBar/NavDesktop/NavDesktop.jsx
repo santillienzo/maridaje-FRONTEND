@@ -64,7 +64,7 @@ const NavDesktop = ({logo}) => {
                     }
                     <div onClick={()=> displayCart()}>
                         <div className={`${styles.navDesktop_nav_li} ${pathname === "/cart" &&(styles.activeClass)}`} title='Carrito'>
-                            <Badge badgeContent={4} color="error">
+                            <Badge badgeContent={4} color="secondary">
                                 <FontAwesomeIcon icon={faShoppingCart} />
                             </Badge>
                         </div>

@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Outfit', sans-serif;
-  background-color: var(--global-primary-color);
+  background-color: var(--global-background-color);
   color: var(--global-text_color);
   scroll-behavior: smooth;
 }
@@ -66,13 +66,12 @@ p, h5, h4{
 
 :root{
   /* Variables generales */
+  --global-background-color: var(--ligth-background-color);
+  --global-background-color_opacity: var(--ligth-background-color_opacity);
   --global-primary-color: var(--ligth-primary-color);
-  --global-primary-color_opacity: var(--ligth-primary-color_opacity);
   --global-secondary-color: var(--ligth-secondary-color);
   --global-tertiary-color: var(--ligth-tertiary-color);
-  --global-inverse-color: var(--ligth-primary-text_color);
   --global-text_color: var(--ligth-primary-text_color);
-  --global-background_color: rgb(105, 13, 105);
 
   /* Colores */
   --global-ligth-gray: #F7F7FF;
@@ -82,22 +81,16 @@ p, h5, h4{
   --global-gray4:#363636;
   --global-gray5:#212121;
 
-  --global-error:#BF1F1F;
-  --global-warning:#ffee00;
-  --global-succesfully:#1ab106;
+  --global-error:#f44336;
+  --global-warning:#ffa726;
+  --global-succesfully:#66bb6a;
 
   /* Variables de tema */
-  --ligth-primary-color:#fcfcfc;
-  --ligth-primary-color_opacity:#ffffff50;
-  --ligth-secondary-color:#F2D43D;
-  --ligth-tertiary-color:#FF2A3F;
+  --ligth-background-color: #fcfcfc;
+  --ligth-background-color_opacity:#ffffff50;
+  --ligth-primary-color:#F2C84B;
+  --ligth-secondary-color:#F23F5E;
   --ligth-primary-text_color: #000;
-
-  --dark-primary-color:#1a1a1a;
-  --dark-primary-color_opacity:#1a1a1a50;
-  --dark-secondary-color:#F2D43D;
-  --dark-tertiary-color:#FF2A3F;
-  --dark-primary-text_color: #fff;
 
   /* Variables de animation.css */
   /* --animate-duration: 500ms; */
