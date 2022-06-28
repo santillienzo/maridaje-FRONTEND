@@ -4,7 +4,7 @@
 }
 
 .navMobile_bar{
-    background-color: var(--global-primary-color_opacity);
+    background-color: var(--global-background-color_opacity);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -85,7 +85,7 @@
 /* ///////////////////////////////// */
 
 .navMobile_nav{
-    background-color: var(--global-primary-color);
+    background-color: var(--global-background-color);
     position: fixed;
     top: 100;
     left: 0;
@@ -106,7 +106,7 @@
     text-align: center;
     padding: 25px;
     border-bottom: 1px solid var(--global-gray4);
-    color: var(--global-primary-text_color);
+    color: var(--global-text_color);
     text-decoration: none;
     display: inline-block;
 }
