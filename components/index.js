@@ -10,3 +10,4 @@ export {default as NavDesktop} from './layout/NavBar/NavDesktop/NavDesktop'
 //Common
 
 //Views
+export {default as Home} from './views/Home/Home'
