@@ -1,23 +1,8 @@
-.navDesktop_container{
-    background-color: var(--global-background-color_opacity);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-    width: 100%;
-    height: 100%;
+.navDesktop_logo{
     position: relative;
-    top: 0;
-    left: 0;
-}
-
-.navDesktop_logo_container{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 8%;
-    height: 50px;
-    cursor: pointer;
+    margin: 0 !important;
+    min-width: 150px !important;
+    max-width: 150px !important;
 }
 
 .navDesktop_nav{
