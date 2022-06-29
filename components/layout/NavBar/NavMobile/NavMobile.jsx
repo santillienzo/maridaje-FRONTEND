@@ -3,15 +3,27 @@ import styles from './NavMobile.module.css'
 import Link from 'next/link'
 import Router, { useRouter } from "next/router";
 import Image from 'next/image'
+import { styled } from '@mui/material/styles';
+
 
 // import { isAuthenticate } from '../../../../lib/auth';
 
 //Contexto de carrito
 import { useContext, useState } from 'react';
-import { Badge } from '@mui/material';
+import { AppBar, Badge, Toolbar, Tooltip, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 // import CartContext from '../../../../context/CartContext';
+
+const AppHeader = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: theme.spacing(0, 1),
+    // background: 'red',
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+}));
 
 const isAuthenticate = ()=> false
 
@@ -41,63 +53,75 @@ const NavMobile = ({logo}) => {
 
     return (
         <div className={styles.navMobile_container}>
-            <div className={styles.navMobile_bar} style={openMenu ? ({backgroundColor:"var(--global-background-color)"}):({})}>
-                <div className={styles.navMobile_logo_container} onClick={()=> Router.push('/')}>
-                    <Image
-                        src={logo}
-                        className={styles.navMobile_logo}
-                        alt={"logo de maridaje club"}
-                        layout='fill'
-                        priority
-                    />
-                </div>
-                <div className={styles.navMobile_bar_content}>
-                    <div className={styles.cart_icon}>
-                        <Badge badgeContent={4} color="error">
-                            <FontAwesomeIcon icon={faShoppingCart} />
-                        </Badge>
+            <AppBar position="fixed" color={openMenu ? ('background'):('backgroundOpacity')}>
+                <Toolbar>
+                    <Box sx={{ 
+                        flexGrow: 1, 
+                        width: '100%',
+                        height: '50px',
+                        display: 'flex', 
+                        alignItems: 'center',
+                        position: 'relative',
+                    }} onClick={()=> Router.push('/')}>
+                        <Image
+                            src={logo}
+                            className={styles.navMobile_logo}
+                            alt={"logo de maridaje club"}
+                            layout='fill'
+                            priority
+                        />
+                    </Box>
+                    <div className={styles.navMobile_bar_content}>
+                        <div className={styles.cart_icon}>
+                            <Badge badgeContent={4} color="error">
+                                <FontAwesomeIcon icon={faShoppingCart} />
+                            </Badge>
+                        </div>
+                        <div className={`${styles.navMobile_menu} `} onClick={()=> displayMenu()} id="navMobile_menu">
+                            <span></span>
+                        </div>
                     </div>
-                    <div className={`${styles.navMobile_menu} `} onClick={()=> displayMenu()} id="navMobile_menu">
-                        <span></span>
-                    </div>
-                </div>
-            </div>
+                </Toolbar>
+            </AppBar>
             {
                 openMenu ? 
                 (
-                <nav className={ `${styles.navMobile_nav} animate__animated animate__slideInDown animate__faster`} id="navMobile_nav">
-                    <ul>
-                        <>
-                            <Link href={'/'} onClick={()=> displayMenu()}>
-                                <a className={`${styles.navMobile_nav_li} ${pathname === "/" &&(styles.activeClass)}`}>
-                                    Inicio
-                                </a>
-                            </Link>
-                            <Link href={'/shopping'} onClick={()=> displayMenu()}>
-                                <a className={`${styles.navMobile_nav_li } ${pathname.includes("/shopping") &&(styles.activeClass)}`}>
-                                    Comprar
-                                </a>
-                            </Link>
-                            {
-                                isAuthenticate() ? (
-                                    <>
-                                        <Link href={'/profile/home'} onClick={()=> displayMenu()}>
-                                            <a className={`${styles.navMobile_nav_li} ${pathname.includes("/profile") &&(styles.activeClass)}`}>
-                                                Perfil
-                                            </a>
-                                        </Link>
-                                    </>
-                                ):(
-                                    <Link href={'/session'} onClick={()=> displayMenu()}>
-                                        <a className={`${styles.navMobile_nav_li} ${pathname === "/session" &&(styles.activeClass)}`}>
-                                            Ingresar
+                    <>
+                        <AppHeader/>
+                        <nav className={ `${styles.navMobile_nav} animate__animated animate__slideInDown animate__faster`} id="navMobile_nav">
+                            <ul>
+                                <>
+                                    <Link href={'/'} onClick={()=> displayMenu()}>
+                                        <a className={`${styles.navMobile_nav_li} ${pathname === "/" &&(styles.activeClass)}`}>
+                                            Inicio
                                         </a>
                                     </Link>
-                                )
-                            }
-                        </>
-                    </ul>
-                </nav>
+                                    <Link href={'/shopping'} onClick={()=> displayMenu()}>
+                                        <a className={`${styles.navMobile_nav_li } ${pathname.includes("/shopping") &&(styles.activeClass)}`}>
+                                            Comprar
+                                        </a>
+                                    </Link>
+                                    {
+                                        isAuthenticate() ? (
+                                            <>
+                                                <Link href={'/profile/home'} onClick={()=> displayMenu()}>
+                                                    <a className={`${styles.navMobile_nav_li} ${pathname.includes("/profile") &&(styles.activeClass)}`}>
+                                                        Perfil
+                                                    </a>
+                                                </Link>
+                                            </>
+                                        ):(
+                                            <Link href={'/session'} onClick={()=> displayMenu()}>
+                                                <a className={`${styles.navMobile_nav_li} ${pathname === "/session" &&(styles.activeClass)}`}>
+                                                    Ingresar
+                                                </a>
+                                            </Link>
+                                        )
+                                    }
+                                </>
+                            </ul>
+                        </nav>
+                    </>
                 ):("")
             }
         </div>
