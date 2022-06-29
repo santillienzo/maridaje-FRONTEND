@@ -10,6 +10,9 @@ const theme = createTheme({
     background:{
       main: '#F7F7FF'
     },
+    backgroundOpacity:{
+      main: '#ffffff50'
+    },
     primary: {
       main: '#F2C84B',
     },

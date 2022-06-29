@@ -25,12 +25,12 @@ body::-webkit-scrollbar-track{
   box-shadow: inset 0px 0px 0px 0px #F0F0F0;
 }
 
-body > div{
+/* body > div{
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 100%;
-}
+} */
 
 * {
   box-sizing: border-box;

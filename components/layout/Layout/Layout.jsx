@@ -1,6 +1,18 @@
 import Head from "next/head";
 import {Footer, NavBar} from "../../";
+import { styled } from '@mui/material/styles';
 import style from './Layout.module.css'
+
+
+const AppHeader = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: theme.spacing(0, 1),
+    // background: 'red',
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+}));
 
 
 const Layout = ({children, title, description, home, cart, nav=true ,footer=true}) => { 
@@ -15,24 +27,29 @@ const Layout = ({children, title, description, home, cart, nav=true ,footer=true
                     content={description}
                 />
             </Head>
-            {
-                nav &&(
-                    <header id="header" className={style.header}>
-                        <NavBar
-                            home={home}
-                            cart={cart}
-                        />
-                    </header>
-                )
-            }
+            <div className={style.app}>
+                {
+                    nav &&(
+                        <header>
+                            <NavBar
+                                home={home}
+                                cart={cart}
+                            />
+                            <AppHeader/>
+                        </header>
+                    )
+                }
 
-            <main className={style.main}>{children}</main>
+                <main className={style.main}>
+                    {children}
+                </main>
 
-            {
-                footer && (
-                    <Footer/>
-                )
-            }
+                {
+                    footer && (
+                        <Footer/>
+                    )
+                }
+            </div>
         </>
     );
 };
