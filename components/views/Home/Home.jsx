@@ -8,8 +8,8 @@ import {
 const Home = () => {
     return (
         <section className={styles.home_section}>
-            <div className={styles.color}></div>
-            <div className={styles.color}></div>
+            {/* <div className={styles.color}></div>
+            <div className={styles.color}></div> */}
             <div className={styles.live_container}>
                 <Box sx={{ display: { xs: 'none', md: 'flex' } }}> {/*MOBILE*/}
                     <div className={styles.presentation_container} id="home">
