@@ -6,8 +6,10 @@ export {default as NavMobile} from './layout/NavBar/NavMobile/NavMobile'
 export {default as NavDesktop} from './layout/NavBar/NavDesktop/NavDesktop'
 
 //Features
+export {default as ShoppingCategories} from './features/ShoppingCategories/ShoppingCategories'
 
 //Common
 
 //Views
 export {default as Home} from './views/Home/Home'
+export {default as Shopping} from './views/Shopping/Shopping'
