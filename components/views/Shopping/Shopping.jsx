@@ -1,5 +1,5 @@
 import React from 'react'
-import {ShoppingCategories} from '../..'
+import {ShoppingCategories, ProductSlider} from '../..'
 
 const rute = '/assets/iconsCategory/'
 
@@ -39,6 +39,7 @@ const Shopping = () => {
     return (
         <section>
             <ShoppingCategories categories={categories}/>
+            <ProductSlider/>
         </section>
     )
 }
