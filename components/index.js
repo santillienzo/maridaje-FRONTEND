@@ -10,6 +10,7 @@ export {default as ShoppingCategories} from './features/ShoppingCategories/Shopp
 
 //Common
 export {default as ProductSlider} from './common/ProductSlider/ProductSlider'
+export {default as ProductCard} from './common/ProductCard/ProductCard'
 
 //Views
 export {default as Home} from './views/Home/Home'

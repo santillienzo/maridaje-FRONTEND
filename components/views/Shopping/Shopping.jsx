@@ -39,7 +39,7 @@ const Shopping = () => {
     return (
         <section>
             <ShoppingCategories categories={categories}/>
-            <ProductSlider/>
+            <ProductSlider sx={{width: '90%', margin: 'auto', mb: 2, mt: 2}}/>
         </section>
     )
 }

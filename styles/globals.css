@@ -95,3 +95,7 @@ p, h5, h4{
   /* Variables de animation.css */
   /* --animate-duration: 500ms; */
 }
+
+.swiper-scrollbar{
+  display: none !important;
+}

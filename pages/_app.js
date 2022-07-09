@@ -2,7 +2,8 @@ import '../styles/globals.css'
 import 'animate.css';
 import { ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
-import { orange } from '@mui/material/colors';
+  // import Swiper styles
+  import 'swiper/css/bundle';
 
 const theme = createTheme({
   palette: {

@@ -28,7 +28,7 @@ class MyDocument extends Document {
             <body>
                 <Main />
                 <NextScript />
-
+                <Script src="js/wow.min.js"></Script>
                 <Script src="https://kit.fontawesome.com/af9ea1f796.js" crossorigin="anonymous"></Script>
                 
             </body>
