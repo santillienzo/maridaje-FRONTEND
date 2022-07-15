@@ -1,0 +1,140 @@
+.live_box{
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+    color: #fff;
+    margin: auto;
+}
+
+.live_wrapper{
+    display: flex ;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.video_container{
+    overflow: hidden;
+    border-radius: 10px 10px 10px 10px ;
+    position: relative;
+    width: 90%;
+    background-color: var(--global-primary-color);
+    height: 500px;
+    min-width: 280px;
+    max-width: 280px;
+}
+
+
+.live_alert{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: var(--global-secondary-color);
+    color: #fff;
+    border-radius: 10px;
+    animation: liveAlert .5s ease-in-out infinite alternate;
+}
+
+
+.help_cover{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--global-primary-color_opacity);
+    z-index: 0;
+}
+
+.video_container:hover .help_cover{
+    opacity: 1 !important;
+}
+
+.more_info{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.live_info_container{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgb(109,117,129);
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(39, 39, 39, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.live_info_container h4{
+    font-size: 1.5rem;
+}
+
+.live_info_container:hover h4{
+    text-decoration: underline;
+}
+
+.live_info_container button{
+    background-color: var(--global-tertiary-color);
+    color: var(--global-primary-color);
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 1px solid var(--global-tertiary-color);
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.live_info_container button:hover{
+    filter: brightness(1.2);
+}
+
+.date_container{
+    margin: 15px 0;
+}
+
+.date_container div{
+    display: flex;
+    align-items: center;
+}
+
+.date_container div p{
+    margin-left: 10px;
+}
+
+
+@media (min-width:750px){
+    .video_container{
+        width: 70%;
+    }
+}
+
+@media (min-width:850px) {
+    .video_container{
+        width: 50%;
+    }
+}
+
+@keyframes liveAlert {
+    0%{
+        opacity: 1;
+    }
+    
+    50%{
+        opacity: .85;
+    }
+    
+    100%{
+        opacity: .6;
+    }
+}

@@ -7,6 +7,7 @@ export {default as NavDesktop} from './layout/NavBar/NavDesktop/NavDesktop'
 
 //Features
 export {default as ShoppingCategories} from './features/ShoppingCategories/ShoppingCategories'
+export {default as Live} from './features/Live/Live'
 
 //Common
 export {default as ProductSlider} from './common/ProductSlider/ProductSlider'
