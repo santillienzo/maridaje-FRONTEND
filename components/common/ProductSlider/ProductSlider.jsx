@@ -18,7 +18,7 @@ const ProductSlider = ({title = '', sx}) => {
                 sx={{
                     mb: 1
                 }}
-                >Nuestros productos</Typography>
+                >{title}</Typography>
             <Swiper
                 slidesPerView={5}
                 spaceBetween={30}

@@ -39,7 +39,8 @@ const Shopping = () => {
     return (
         <section>
             <ShoppingCategories categories={categories}/>
-            <ProductSlider sx={{width: '90%', margin: 'auto', mb: 2, mt: 2}}/>
+            <ProductSlider sx={{width: '90%', margin: 'auto', mb: 2, mt: 2}} title="Productos más vendidos"/>
+            <ProductSlider sx={{width: '90%', margin: 'auto', mb: 2, mt: 2}} title="Ofertas"/>
         </section>
     )
 }
