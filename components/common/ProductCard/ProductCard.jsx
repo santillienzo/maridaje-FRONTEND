@@ -5,7 +5,7 @@ import { useContext, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { Box } from '@mui/material';
-// import CartContext from '../../../context/CartContext';
+import CartContext from '../../../context/CartContext';
 
 
 const isServer = typeof window === 'undefined'
@@ -15,7 +15,7 @@ const isServer = typeof window === 'undefined'
 const ProductCard = ({product, cart = true, sx}) => {
 
     const {id, name, description, sale_price, feature_img} = product;
-    // const {addItemToCart} = useContext(CartContext)
+    const {addItemToCart} = useContext(CartContext)
 
     const openDescription =(e)=>{
         e.target.parentNode.classList.add(`${styles.description_hidden}`)
@@ -49,7 +49,7 @@ const ProductCard = ({product, cart = true, sx}) => {
                                 <span>Ver más</span>
                             </div>
                             <div className={styles.button} onClick={()=> {
-                                // addItemToCart(product)
+                                addItemToCart({id, name, feature_img, description, sale_price})
                             }}>
                                 <FontAwesomeIcon icon={faCartArrowDown}/>
                             </div>

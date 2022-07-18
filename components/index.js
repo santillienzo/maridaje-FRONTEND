@@ -9,6 +9,7 @@ export {default as NavDesktop} from './layout/NavBar/NavDesktop/NavDesktop'
 export {default as ShoppingCategories} from './features/ShoppingCategories/ShoppingCategories'
 export {default as Live} from './features/Live/Live'
 export {default as CartDrawer} from './features/CartDrawer/CartDrawer'
+export {default as ProductCartList} from './features/ProductCartList/ProductCartList'
 
 //Common
 export {default as ProductSlider} from './common/ProductSlider/ProductSlider'

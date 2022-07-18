@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './NavDesktop.module.css'
 import Link from 'next/link'
 import Router from "next/router";
@@ -17,9 +17,13 @@ import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faShoppingBag, faShoppingCart, faSignIn, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Badge, Box, Toolbar } from '@mui/material';
+import CartContext from '../../../../context/CartContext';
 
 const NavDesktop = ({logo, setOpenCart}) => {
     const {pathname} = useRouter()
+
+    const {countCart} = useContext(CartContext)
+
 
     return (
         <AppBar position="fixed" color='backgroundOpacity'>
@@ -73,7 +77,7 @@ const NavDesktop = ({logo, setOpenCart}) => {
                         }
                         <div onClick={()=> setOpenCart(true)}>
                             <div className={`${styles.navDesktop_nav_li} ${pathname === "/cart" &&(styles.activeClass)}`} title='Carrito'>
-                                <Badge badgeContent={4} color="secondary">
+                                <Badge badgeContent={countCart} color="secondary">
                                     <FontAwesomeIcon icon={faShoppingCart} />
                                 </Badge>
                             </div>
