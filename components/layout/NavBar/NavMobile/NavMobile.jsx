@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Router, { useRouter } from "next/router";
 import Image from 'next/image'
 import { styled } from '@mui/material/styles';
+import {AppHeader} from '../../../'
 
 
 // import { isAuthenticate } from '../../../../lib/auth';
@@ -15,19 +16,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 // import CartContext from '../../../../context/CartContext';
 
-const AppHeader = styled('div')(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: theme.spacing(0, 1),
-    // background: 'red',
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-}));
-
 const isAuthenticate = ()=> false
 
-const NavMobile = ({logo}) => {
+const NavMobile = ({logo, setOpenCart}) => {
     const {pathname} = useRouter()
 
     const [openMenu, setOpenMenu] = useState(false);
@@ -77,7 +68,7 @@ const NavMobile = ({logo}) => {
                                 <FontAwesomeIcon icon={faShoppingCart} />
                             </Badge>
                         </div>
-                        <div className={`${styles.navMobile_menu} `} onClick={()=> displayMenu()} id="navMobile_menu">
+                        <div className={`${styles.navMobile_menu} `} onClick={()=> setOpenCart(true)} id="navMobile_menu">
                             <span></span>
                         </div>
                     </div>

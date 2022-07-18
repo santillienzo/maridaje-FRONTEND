@@ -18,7 +18,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faShoppingBag, faShoppingCart, faSignIn, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Badge, Box, Toolbar } from '@mui/material';
 
-const NavDesktop = ({logo}) => {
+const NavDesktop = ({logo, setOpenCart}) => {
     const {pathname} = useRouter()
 
     return (
@@ -71,7 +71,7 @@ const NavDesktop = ({logo}) => {
                                 </Link>
                             )
                         }
-                        <div onClick={()=> displayCart()}>
+                        <div onClick={()=> setOpenCart(true)}>
                             <div className={`${styles.navDesktop_nav_li} ${pathname === "/cart" &&(styles.activeClass)}`} title='Carrito'>
                                 <Badge badgeContent={4} color="secondary">
                                     <FontAwesomeIcon icon={faShoppingCart} />
