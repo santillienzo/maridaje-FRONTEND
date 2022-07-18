@@ -33,7 +33,7 @@ const ProductSlider = ({title = '', sx}) => {
             >
                 <SwiperSlide className={styles.swiperSlide}>
                     <ProductCard product={{
-                        id: '1215', 
+                        id: 1, 
                         name: 'Vino', 
                         description: 'Commodo ullamco ullamco in veniam tempor ut qui aute consequat id sint velit ut cupidatat. Elit mollit laborum amet nisi culpa pariatur officia labore. Dolore aliquip irure labore mollit enim minim enim occaecat sunt deserunt aliquip esse. Sit laborum Lorem excepteur nulla labore amet ut mollit cillum ad et. Eu velit deserunt exercitation quis id voluptate minim aliqua enim.', 
                         sale_price: '5859', 
@@ -44,7 +44,7 @@ const ProductSlider = ({title = '', sx}) => {
                 </SwiperSlide>
                 <SwiperSlide className={styles.swiperSlide}>
                     <ProductCard product={{
-                        id: '1215', 
+                        id: 2, 
                         name: 'Vino', 
                         description: 'Commodo ullamco ullamco in veniam tempor ut qui aute consequat id sint velit ut cupidatat. Elit mollit laborum amet nisi culpa pariatur officia labore. Dolore aliquip irure labore mollit enim minim enim occaecat sunt deserunt aliquip esse. Sit laborum Lorem excepteur nulla labore amet ut mollit cillum ad et. Eu velit deserunt exercitation quis id voluptate minim aliqua enim.', 
                         sale_price: '5859', 
@@ -55,7 +55,7 @@ const ProductSlider = ({title = '', sx}) => {
                 </SwiperSlide>
                 <SwiperSlide className={styles.swiperSlide}>
                     <ProductCard product={{
-                        id: '1215', 
+                        id: 3, 
                         name: 'Vino', 
                         description: 'Commodo ullamco ullamco in veniam tempor ut qui aute consequat id sint velit ut cupidatat. Elit mollit laborum amet nisi culpa pariatur officia labore. Dolore aliquip irure labore mollit enim minim enim occaecat sunt deserunt aliquip esse. Sit laborum Lorem excepteur nulla labore amet ut mollit cillum ad et. Eu velit deserunt exercitation quis id voluptate minim aliqua enim.', 
                         sale_price: '5859', 
@@ -66,7 +66,7 @@ const ProductSlider = ({title = '', sx}) => {
                 </SwiperSlide>
                 <SwiperSlide className={styles.swiperSlide}>
                     <ProductCard product={{
-                        id: '1215', 
+                        id: 4, 
                         name: 'Vino', 
                         description: 'Commodo ullamco ullamco in veniam tempor ut qui aute consequat id sint velit ut cupidatat. Elit mollit laborum amet nisi culpa pariatur officia labore. Dolore aliquip irure labore mollit enim minim enim occaecat sunt deserunt aliquip esse. Sit laborum Lorem excepteur nulla labore amet ut mollit cillum ad et. Eu velit deserunt exercitation quis id voluptate minim aliqua enim.', 
                         sale_price: '5859', 
@@ -77,7 +77,7 @@ const ProductSlider = ({title = '', sx}) => {
                 </SwiperSlide>
                 <SwiperSlide className={styles.swiperSlide}>
                     <ProductCard product={{
-                        id: '1215', 
+                        id: 5, 
                         name: 'Vino', 
                         description: 'Commodo ullamco ullamco in veniam tempor ut qui aute consequat id sint velit ut cupidatat. Elit mollit laborum amet nisi culpa pariatur officia labore. Dolore aliquip irure labore mollit enim minim enim occaecat sunt deserunt aliquip esse. Sit laborum Lorem excepteur nulla labore amet ut mollit cillum ad et. Eu velit deserunt exercitation quis id voluptate minim aliqua enim.', 
                         sale_price: '5859', 
@@ -88,7 +88,7 @@ const ProductSlider = ({title = '', sx}) => {
                 </SwiperSlide>
                 <SwiperSlide className={styles.swiperSlide}>
                     <ProductCard product={{
-                        id: '1215', 
+                        id: 6, 
                         name: 'Vino', 
                         description: 'Commodo ullamco ullamco in veniam tempor ut qui aute consequat id sint velit ut cupidatat. Elit mollit laborum amet nisi culpa pariatur officia labore. Dolore aliquip irure labore mollit enim minim enim occaecat sunt deserunt aliquip esse. Sit laborum Lorem excepteur nulla labore amet ut mollit cillum ad et. Eu velit deserunt exercitation quis id voluptate minim aliqua enim.', 
                         sale_price: '5859', 

@@ -4,6 +4,8 @@ import { ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
   // import Swiper styles
   import 'swiper/css/bundle';
+import { CartContextProvider } from '../context/CartContext';
+import { Toaster } from 'react-hot-toast';
 
 const theme = createTheme({
   palette: {
@@ -26,9 +28,12 @@ const theme = createTheme({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-    </ThemeProvider>
+    <CartContextProvider>
+      <ThemeProvider theme={theme}>
+          <Toaster/>
+          <Component {...pageProps} />
+      </ThemeProvider>
+    </CartContextProvider>
   )
 }
 
