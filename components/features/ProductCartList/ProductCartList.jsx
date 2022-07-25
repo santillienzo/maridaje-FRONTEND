@@ -61,17 +61,17 @@ const ProductCartList = ({toggleDrawer}) => {
                             <MenuItem value={10}>10</MenuItem>
                     </Select>
                 </FormControl>
-                <IconButton
-                    onClick={()=> deleteItemToCart(product.id)}
-                    size="large"
-                    edge="end"
-                    aria-label="account of current user"
-                    aria-haspopup="true"
-                >
                     <Tooltip title='Eliminar de carrito'>
-                        <FontAwesomeIcon icon={faTrash} style={{fontSize: '20px'}}/>
+                        <IconButton
+                            onClick={()=> deleteItemToCart(product.id)}
+                            size="large"
+                            edge="end"
+                            aria-label="account of current user"
+                            aria-haspopup="true"
+                        >
+                                <FontAwesomeIcon icon={faTrash} style={{fontSize: '20px'}}/>
+                        </IconButton>
                     </Tooltip>
-                </IconButton>
             </Paper>
             ))
         }
