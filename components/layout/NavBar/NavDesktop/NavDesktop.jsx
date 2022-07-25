@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './NavDesktop.module.css'
 import Link from 'next/link'
 import Router from "next/router";
@@ -20,12 +20,16 @@ import { Badge, Box, Toolbar } from '@mui/material';
 import CartContext from '../../../../context/CartContext';
 
 const NavDesktop = ({logo, setOpenCart}) => {
+    const [mounted, setMounted] = useState(false)
     const {pathname} = useRouter()
-
     const {countCart} = useContext(CartContext)
+    
+    useEffect(()=>{
+        setMounted(true)
+    },[mounted])
 
 
-    return (
+    return mounted && (
         <AppBar position="fixed" color='backgroundOpacity'>
             <Toolbar>
                 <Box sx={{ 

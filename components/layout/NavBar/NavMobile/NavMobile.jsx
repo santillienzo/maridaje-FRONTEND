@@ -15,15 +15,23 @@ import { AppBar, Badge, Toolbar, Tooltip, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import CartContext from '../../../../context/CartContext';
+import { useEffect } from 'react';
 // import CartContext from '../../../../context/CartContext';
 
 const isAuthenticate = ()=> false
 
 const NavMobile = ({logo, setOpenCart}) => {
+    const [mounted, setMounted] = useState(false)
+
     const {pathname} = useRouter()
 
     const [openMenu, setOpenMenu] = useState(false);
     const {countCart} = useContext(CartContext)
+
+    useEffect(()=>{
+        setMounted(true)
+    },[mounted])
+
 
     const displayMenu = ()=>{
         const navMobile = document.getElementById('navMobile_nav')
@@ -44,7 +52,7 @@ const NavMobile = ({logo, setOpenCart}) => {
 
     }
 
-    return (
+    return mounted &&(
         <div className={styles.navMobile_container}>
             <AppBar position="fixed" color={openMenu ? ('background'):('backgroundOpacity')}>
                 <Toolbar>
@@ -66,9 +74,9 @@ const NavMobile = ({logo, setOpenCart}) => {
                     </Box>
                     <div className={styles.navMobile_bar_content}>
                         <div className={styles.cart_icon} onClick={()=> setOpenCart(true)}>
-                            {/* <Badge badgeContent={countCart} color="error">
+                            <Badge badgeContent={countCart} color="error">
                                 <FontAwesomeIcon icon={faShoppingCart} />
-                            </Badge> */}
+                            </Badge>
                         </div>
                         <div className={`${styles.navMobile_menu} `} onClick={()=> setOpenMenu(true)} id="navMobile_menu">
                             <span></span>
