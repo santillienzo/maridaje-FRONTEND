@@ -66,9 +66,9 @@ const NavMobile = ({logo, setOpenCart}) => {
                     </Box>
                     <div className={styles.navMobile_bar_content}>
                         <div className={styles.cart_icon} onClick={()=> setOpenCart(true)}>
-                            <Badge badgeContent={countCart} color="error">
+                            {/* <Badge badgeContent={countCart} color="error">
                                 <FontAwesomeIcon icon={faShoppingCart} />
-                            </Badge>
+                            </Badge> */}
                         </div>
                         <div className={`${styles.navMobile_menu} `} onClick={()=> setOpenMenu(true)} id="navMobile_menu">
                             <span></span>

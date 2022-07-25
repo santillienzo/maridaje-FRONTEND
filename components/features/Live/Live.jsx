@@ -17,7 +17,7 @@ const Live = ({helpOpacity}) => {
                     <video
                         className={styles.react_player}
                         src={'/video.mp4'}
-                        playing
+                        playing="true"
                         loop
                         muted
                         autoPlay
