@@ -5,6 +5,8 @@ import {
     Link as LinkScroll
 } from 'react-scroll'
 import {Live} from '../../';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBag, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     const [helpOpacity, setHelpOpacity] = useState(0)    
@@ -12,20 +14,22 @@ const Home = () => {
     return (
         <section className={styles.home_section}>
             <div className={styles.presentation_wrapper} id="home">
-                <div className={styles.text_side}>
-                    <div>
-                        <h3>Live Streaming & eCommerce</h3>
-                        <p>Viví la única experiencia <span>Live Streaming Shopping</span> de bebidas, conoce a sus creadores y encontrá precios únicos</p>
-                    </div>
-                    <div>
-                        <LinkScroll className={styles.action_btn} to="live" spy={true} offset={-40} onClick={()=> setHelpOpacity(1)}><i className="fas fa-video"></i> Ver en vivo</LinkScroll>
-                        <LinkScroll className={styles.action_btn} to="commerce" spy={true}><span><i className="fas fa-shopping-bag"></i> Comprar</span></LinkScroll>
-                    </div>
-                </div>
                 <div className={styles.live_side}>
                     <Live
                         helpOpacity={helpOpacity}
                     />
+                </div>
+                <div className={styles.text_side}>
+                    <div>
+                        <div>
+                            <h3>Comprá en VIVO</h3>
+                            <p>Las mejores bebidas presentadas por sus creadores en el 1er <span>LiveStream Shopping</span>.</p>
+                        </div>
+                        <div>
+                            <LinkScroll className={styles.action_btn} to="live" spy={true} offset={-40} onClick={()=> setHelpOpacity(1)}><span> <FontAwesomeIcon icon={faVideo}/> Ver en vivo</span></LinkScroll>
+                            <LinkScroll className={styles.action_btn} to="commerce" spy={true}><span><FontAwesomeIcon icon={faShoppingBag}/> Comprar</span></LinkScroll>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,26 +1,14 @@
-.live_box{
-    position: relative;
-    z-index: 1;
-    flex-grow: 1;
-    color: #fff;
-    margin: auto;
-}
-
-.live_wrapper{
-    display: flex ;
-    justify-content: center;
-    margin-top: 15px;
-}
-
 .video_container{
     overflow: hidden;
-    border-radius: 10px 10px 10px 10px ;
     position: relative;
-    width: 90%;
-    background-color: var(--global-primary-color);
-    height: 500px;
-    min-width: 280px;
-    max-width: 280px;
+    z-index: 1;
+    color: #fff;
+    width: max-content;
+    background-color: green;
+    border-radius: 10px 10px 10px 10px ;
+    height: calc(1280px / 2.1);
+    min-width: calc(720px / 2.1);
+    max-width: calc(720px / 2.1);
 }
 
 
@@ -82,17 +70,6 @@
 
 .live_info_container:hover h4{
     text-decoration: underline;
-}
-
-.live_info_container button{
-    background-color: var(--global-tertiary-color);
-    color: var(--global-primary-color);
-    padding: 10px 25px;
-    border-radius: 15px;
-    border: 1px solid var(--global-tertiary-color);
-    outline: none;
-    cursor: pointer;
-    transition: .5s;
 }
 
 .live_info_container button:hover{

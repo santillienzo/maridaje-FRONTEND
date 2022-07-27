@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
 html,
 body {
   padding: 0;
@@ -36,6 +38,7 @@ body::-webkit-scrollbar-track{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Comfortaa', cursive;
 }
 
 a {
@@ -81,7 +84,7 @@ p, h5, h4{
   --global-gray4:#363636;
   --global-gray5:#212121;
 
-  --global-error:#f44336;
+  --global-error:#EB0701;
   --global-warning:#ffa726;
   --global-succesfully:#66bb6a;
 
