@@ -23,7 +23,7 @@ const Home = () => {
                     <div>
                         <div>
                             <h3>Comprá en VIVO</h3>
-                            <p>Las mejores bebidas presentadas por sus creadores en el 1er <span>LiveStream Shopping</span>.</p>
+                            <p>Entrá a las mejores Bodegas, conocé los creadores de la magia del vino en un tour de degustación y maridaje. Una experiencia única donde podrás conocer a las celebridades del vino y acceder desde tu casa a una experiencia de compra online que te hará sentir en el centro de la Finca.</p>
                         </div>
                         <div>
                             <LinkScroll className={styles.action_btn} to="live" spy={true} offset={-40} onClick={()=> setHelpOpacity(1)}><span> <FontAwesomeIcon icon={faVideo}/> Ver en vivo</span></LinkScroll>
